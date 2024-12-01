@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/NotePad_new-master.iml" filepath="$PROJECT_DIR$/.idea/NotePad_new-master.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/NotePad_new-master.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/NotePad_new-master.app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/NotePad_new-master.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/NotePad_new-master.app.androidTest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/NotePad_new-master.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/NotePad_new-master.app.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/NotePad_new-master.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/NotePad_new-master.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/NotePad_new-master2.iml" filepath="$PROJECT_DIR$/.idea/modules/NotePad_new-master2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/NotePad_new-master2.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/NotePad_new-master2.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/NotePad_new-master2.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/NotePad_new-master2.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/NotePad_new-master2.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/NotePad_new-master2.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/NotePad_new-master2.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/NotePad_new-master2.app.unitTest.iml" />
     </modules>
   </component>
 </project>

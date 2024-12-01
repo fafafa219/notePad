@@ -93,7 +93,7 @@ public class NotesList extends ListActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // The user does not need to hold down the key to use menu shortcuts.
+
         setDefaultKeyMode(DEFAULT_KEYS_SHORTCUT);
         Intent intent = getIntent();
         if (intent.getData() == null) {
@@ -103,11 +103,11 @@ public class NotesList extends ListActivity {
         getListView().setOnCreateContextMenuListener(this);
 
         Cursor cursor = managedQuery(
-                getIntent().getData(),            // Use the default content URI for the provider.
-                PROJECTION,                       // Return the note ID and title for each note.
-                null,                             // No where clause, return all records.
-                null,                             // No where clause, therefore no where column values.
-                NotePad.Notes.DEFAULT_SORT_ORDER  // Use the default sort order.
+                getIntent().getData(),
+                PROJECTION,
+                null,
+                null,
+                NotePad.Notes.DEFAULT_SORT_ORDER
         );
 
 
@@ -118,34 +118,23 @@ public class NotesList extends ListActivity {
         int[] viewIDs = {android.R.id.text1,  R.id.modification_date_text,
         };
 
-        // Creates the backing adapter for the ListView.
         SimpleCursorAdapter adapter = new SimpleCursorAdapter(
-                this,                              // The Context for the ListView
-                R.layout.noteslist_item,           // Points to the XML for a list item
-                cursor,                            // The cursor to get items from
-                dataColumns,                       // The cursor columns to bind to views
-                viewIDs,                           // The views to bind the columns to
-                0                                  // Flags (no extra flags here)
+                this,
+                R.layout.noteslist_item,
+                cursor,
+                dataColumns,
+                viewIDs,
+                0
         );
 
-// Set a custom view binder to format timestamps
         adapter.setViewBinder(new SimpleCursorAdapter.ViewBinder() {
             @Override
             public boolean setViewValue(View view, Cursor cursor, int columnIndex) {
                 if (view.getId() == R.id.modification_date_text) {
-                    // Get the timestamp from the cursor
                     long timestamp = cursor.getLong(columnIndex);
-
-                    // Create a SimpleDateFormat instance for the desired format
                     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault());
-
-                    // Set the time zone to Asia/Shanghai (East 8 timezone)
                     sdf.setTimeZone(TimeZone.getTimeZone("Asia/Shanghai"));
-
-                    // Format the timestamp to a readable date string in East 8 timezone
                     String dateStr = sdf.format(new Date(timestamp));
-
-                    // Set the formatted date string to the TextView
                     ((TextView) view).setText(dateStr);
                     return true;
                 }
@@ -297,7 +286,7 @@ public class NotesList extends ListActivity {
         // Add search functionality
         MenuItem searchItem = menu.findItem(R.id.menu_search);  // Assuming you have defined a menu item with this ID
         SearchView searchView = (SearchView) searchItem.getActionView();
-        searchView.setQueryHint("Search by title or content");
+        searchView.setQueryHint("根据标题或内容进行搜索");
 
         // Set up a listener for the search query text
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
